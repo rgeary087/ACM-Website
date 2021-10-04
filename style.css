@@ -1,0 +1,130 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: 'Monteserrat', sans-serif;
+}
+body{
+    background-color: #e8f1f2;
+}
+.Header-Div{
+    background-color: #056b96;
+    height: 3vh;
+    width: 100%;
+    padding: 0vh;
+    margin: 0vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#Meeting-Alert{
+    font-weight: 700;
+    color: white;
+}
+.Nav-Div{
+    height: 12vh;
+    background-color: #038dc7;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*gap: 10vh;*/
+}
+.Title{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#Title-BigText{
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+}
+#Title-SmallText{
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    font-style: oblique;
+    padding-top: .25vh;
+}
+.ACM-Logo{
+    height:100%;
+}
+#Discord{
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    padding-right: 4vw;
+}
+img{
+    height: 12vh;
+}
+#Welcome-Div{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    height: 13vh;
+    gap: 5vw;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    padding-top: 2vh;
+}
+#Welcome-Text-Div{
+    color: white;
+    width: 30%;
+    background-color: #056b96;
+    font-weight: 700;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+}
+#Welcome-Paragraph-Div{
+    color:black;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+#Eboard-Title{
+    padding-top:3vh;
+    text-align: center;
+    font-size: 3vh;
+    font-style: italic;
+    border: black;
+    border-width: 2px;
+    font-weight: 300;
+}
+
+#Eboard-Div{
+    display: grid;
+    padding-left: 2vh;
+    padding-top: 2vh;
+    grid-template-columns: repeat(4, 24vw);
+    grid-template-rows: repeat(3, 35vh);
+    row-gap: 2vh;
+    column-gap: 1vw;
+}
+.Eboard-Mem{
+    width:20vw;
+    height:35vh;
+    background-color: #056b96;
+    color: white;
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+    display:flex;
+
+}
