@@ -1,3 +1,4 @@
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
     margin: 0;
     padding: 0;
@@ -27,7 +28,7 @@ body{
     color: white;
 }
 .Nav-Div{
-    height: 12vh;
+    height: auto;
     background-color: #038dc7;
     display:flex;
     flex-direction: row;
@@ -43,15 +44,16 @@ body{
 }
 #Title-BigText{
     color: white;
-    font-size: 5vw;
+    font-size: clamp(2rem, 1rem + 2vw, 7rem);
     text-align: center;
 }
 #Title-SmallText{
     color: white;
-    font-size: 1.5vw;
+    font-size: clamp(.5rem, 1rem + .5vw, 3rem);
     text-align: center;
     font-style: oblique;
     padding-top: .25vh;
+    margin-bottom: 1vh;
 }
 .ACM-Logo{
     height:100%;
@@ -66,36 +68,38 @@ img{
     height: 12vh;
 }
 #Welcome-Div{
-    display: flex;
-    flex-direction: row;
+    /*display: flex;
+    flex-direction: row;*/
     align-items: top;
-    height: 13vh;
-    gap: 5vw;
-    margin-left: 1vw;
-    margin-right: 2vw;
+    height: auto;
+    /*margin-left: 1vw;
+    margin-right: 2vw;*/
     padding-top: 2vh;
+    margin: 0 auto;
 }
-#Welcome-Text-Div{
+/*#Welcome-Text-Div{
     color: white;
+    height:auto;
     width: 30%;
     background-color: #056b96;
     font-weight: 700;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    margin:auto 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3vw;
-}
+}*/
 #Welcome-Paragraph-Div{
+    margin: 0 auto;
     color:black;
-    width: 60%;
+    width: 80%;
+    font-size: clamp(.25rem, 1rem + .5vw, 3rem);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-style: italic;
+    /* font-style: italic; */
 }
 #Eboard-Title{
     padding-top:3vh;
@@ -127,4 +131,21 @@ img{
     grid-row-end: auto;
     display:flex;
 
+}
+
+@media (min_width: 780px) {
+    #Title-BigText{
+        font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    }
+    #Welcome-Text-Div{
+        font-size: 11.7px;
+    }
+}
+@media (min_width: 1000px) {
+    #Title-BigText{
+        font-size: 14px;
+    }
+    #Welcome-Text-Div{
+        font-size: 11.7px;
+    }
 }
