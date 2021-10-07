@@ -12,12 +12,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body{
     background-color: #e8f1f2;
 }
+
 .Header-Div{
     background-color: #056b96;
     height: 3vh;
-    width: 100%;
+    width: 95%;
     padding: 0vh;
-    margin: 0vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,6 +30,8 @@ body{
 }
 .Nav-Div{
     height: auto;
+    width: 95%;
+    margin: 0 auto;
     background-color: #038dc7;
     display:flex;
     flex-direction: row;
@@ -55,8 +58,9 @@ body{
     padding-top: .25vh;
     margin-bottom: 1vh;
 }
-.ACM-Logo{
-    height:100%;
+#ACM-Logo{
+    height: 7rem;
+   
 }
 #Discord{
     color: white;
@@ -64,9 +68,8 @@ body{
     text-align: center;
     padding-right: 4vw;
 }
-img{
-    height: 12vh;
-}
+
+
 #Welcome-Div{
     /*display: flex;
     flex-direction: row;*/
@@ -93,36 +96,55 @@ img{
 #Welcome-Paragraph-Div{
     margin: 0 auto;
     color:black;
-    width: 80%;
+    max-width: 1200px;
     font-size: clamp(.25rem, 1rem + .5vw, 3rem);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
     /* font-style: italic; */
 }
+
 #Eboard-Title{
     padding-top:3vh;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2.5em;
     font-style: italic;
     border: black;
     border-width: 2px;
     font-weight: 300;
 }
+#Meet-Eboard-Div{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content:space-between;
+    width: 95%;
+    margin: 0 auto;
+}
 
+#Meet-Div{
+    max-width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+}
 #Eboard-Div{
     display: grid;
-    padding-left: 2vh;
+    padding-right: 1.5vw;
     padding-top: 2vh;
-    grid-template-columns: repeat(4, 24vw);
-    grid-template-rows: repeat(3, 35vh);
-    row-gap: 2vh;
-    column-gap: 1vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* row-gap: 2vh;
+    column-gap: 1vw; */
 }
+
 .Eboard-Mem{
-    width:20vw;
-    height:35vh;
+
     background-color: #056b96;
     color: white;
     grid-column-start: auto;
@@ -130,10 +152,21 @@ img{
     grid-row-start: auto;
     grid-row-end: auto;
     display:flex;
-
+    width: auto;
+    max-width: 18vw;
 }
-
-@media (min_width: 780px) {
+.Eboard-Img{
+    max-width: 18vw;
+    height: auto;
+}
+.Meeting{
+    padding-top: 1.5vh;
+    border-bottom: 2px black;
+}
+.Meeting-Title{
+    font-size: clamp(1rem, 1rem + .5vw, 4.25rem);
+}
+/* @media (min_width: 780px) {
     #Title-BigText{
         font-size: calc(10px + 6 * ((100vw - 320px) / 680));
     }
@@ -148,4 +181,4 @@ img{
     #Welcome-Text-Div{
         font-size: 11.7px;
     }
-}
+} */
