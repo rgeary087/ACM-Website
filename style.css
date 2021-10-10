@@ -142,7 +142,9 @@ body{
     /* row-gap: 2vh;
     column-gap: 1vw; */
 }
-
+#Meet-Title{
+    font-size: clamp(1rem, 1rem + 1vw, 2.5rem)
+}
 .Eboard-Mem{
 
     background-color: #056b96;
@@ -161,7 +163,8 @@ body{
 }
 .Meeting{
     padding-top: 1.5vh;
-    border-bottom: 2px black;
+    border-bottom: 2px solid  black;
+    font-weight: 300;
 }
 .Meeting-Title{
     font-size: clamp(1rem, 1rem + .5vw, 4.25rem);
