@@ -111,7 +111,7 @@ body{
     padding-top:3vh;
     text-align: center;
     font-size: 2.5em;
-    font-style: italic;
+    /* font-style: italic; */
     border: black;
     border-width: 2px;
     font-weight: 300;
@@ -135,19 +135,19 @@ body{
 }
 #Eboard-Div{
     display: grid;
-    padding-right: 1.5vw;
-    padding-top: 2vh;
+    margin-left: 3vw;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    /* row-gap: 2vh;
-    column-gap: 1vw; */
+    grid-template-rows: repeat(2, 1fr); 
+    row-gap: .2vh;
+    /* column-gap: .1vw;  */
+    background-color:#056b96;
 }
 #Meet-Title{
     font-size: clamp(1rem, 1rem + 1vw, 2.5rem)
 }
 .Eboard-Mem{
 
-    background-color: #056b96;
+    background-color: #e8f1f2;
     color: white;
     grid-column-start: auto;
     grid-column-end: auto;
@@ -156,32 +156,39 @@ body{
     display:flex;
     width: auto;
     max-width: 18vw;
+    position: relative;
+    
 }
 .Eboard-Img{
     max-width: 18vw;
-    height: auto;
+    height: 100%;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+.Eboard-Img:hover{
+    opacity: 0%;
 }
 .Meeting{
     padding-top: 1.5vh;
     border-bottom: 2px solid  black;
     font-weight: 300;
+    transition-duration: 0.3s;
+}
+.Meeting:hover{
+    transform:scale(1.1);
 }
 .Meeting-Title{
     font-size: clamp(1rem, 1rem + .5vw, 4.25rem);
 }
-/* @media (min_width: 780px) {
-    #Title-BigText{
-        font-size: calc(10px + 6 * ((100vw - 320px) / 680));
-    }
-    #Welcome-Text-Div{
-        font-size: 11.7px;
-    }
+.Eboard-Mem-Des{
+    color: black;
+    position: absolute;
+    z-index: 0;
 }
-@media (min_width: 1000px) {
-    #Title-BigText{
-        font-size: 14px;
-    }
-    #Welcome-Text-Div{
-        font-size: 11.7px;
-    }
+/* @media (max_width: 580px) {
+   #Eboard-Div{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+   }
 } */
