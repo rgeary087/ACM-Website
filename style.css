@@ -1,5 +1,5 @@
 :root{
-    --repeat: 2;
+    --repeat: 1;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
@@ -10,8 +10,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    font-family: 'Monteserrat', sans-serif;
-}
+    font-family: 'Arvo', serif;}
 body{
     background-color: #e8f1f2;
 }
@@ -38,9 +37,11 @@ body{
     background-color: #038dc7;
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    justify-content:right;
     align-items: center;
-    /*gap: 10vh;*/
+    padding-top: 5vh;
+    /* row-gap: 20vh; */
 }
 .Title{
     display:flex;
@@ -63,13 +64,12 @@ body{
 }
 #ACM-Logo{
     height: 10rem;
-   
 }
 #Discord{
     color: white;
-    font-size: 1.5vw;
-    text-align: center;
-    padding-right: 4vw;
+    font-size: clamp(.5rem, 1rem + .5vw, 3rem);
+    margin: 0 auto;
+    text-align: left;
 }
 .Discord-Text{
     animation: wave-text 3s ease-in-out 2s 1;
@@ -104,7 +104,7 @@ body{
     margin: 0 auto;
     color:black;
     max-width: 1200px;
-    font-size: clamp(.25rem, 1rem + .5vw, 3rem);
+    font-size: clamp(.25rem, .75rem + .5vw, 2.5rem);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -115,13 +115,13 @@ body{
 }
 
 #Eboard-Title{
-    padding-top:3vh;
     text-align: center;
-    font-size: 2.5em;
+    font-size: clamp(1rem, 1rem + 1vw, 2.5rem);
+    font-weight: 700;
     /* font-style: italic; */
     border: black;
     border-width: 2px;
-    font-weight: 300;
+    font-weight: 700;
 }
 #Meet-Eboard-Div{
     display: flex;
@@ -131,6 +131,7 @@ body{
     /* width: 95%; */
     margin: 0 auto;
     /* height: 50vh; */
+    padding-top: 2vh;
 }
 
 #Meet-Div{
@@ -147,17 +148,20 @@ body{
     margin-left: 3vw;
     /* grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);  */
-    grid-template-columns: repeat(var(--repeat), minmax(200px , 1fr)); 
-    grid-gap: 10px; 
+    grid-template-columns: repeat(var(--repeat),1fr); 
+    grid-gap: 2px; 
+    width: 100%;
+    padding-left: 7vw;
     /* background-color:black; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 #Meet-Title{
-    font-size: clamp(1rem, 1rem + 1vw, 2.5rem)
+    font-size: clamp(1rem, 1rem + 1vw, 2.5rem);
+    font-weight: 700;
 }
 .Eboard-Mem{
-
+    border: 1px solid #d4d6d6;
     background-color: #e8f1f2;
     color: white;
     grid-column-start: auto;
@@ -165,7 +169,7 @@ body{
     grid-row-start: auto;
     grid-row-end: auto;
     display:flex;
-    height: 100%;
+    height: auto;
     max-width: 15rem;
     position: relative;
     background: repeating-linear-gradient( 45deg, #e7f0f1, #e7f0f1 5px, #e8f1f2 5px, #e8f1f2 25px );
@@ -199,6 +203,7 @@ body{
 .Eboard-Mem-Des{
     color: black;
     position: absolute;
+    width:auto;
     z-index: 0;
     padding-left: .45vw;
     padding-right: .45vw;
@@ -206,12 +211,12 @@ body{
 }
 .Eboard-Name{
     text-align: center;
-    margin-top: 1vh;
+    margin-top: .5vh;
     font-size: clamp(.5rem, .5rem + .75vw, 5rem);
 
 }
 .Eboard-Bio{
-    font-size: clamp(.15rem, .5rem + .5vw, 2rem);
+    font-size: clamp(.75rem, .3rem + .5vw, .85rem);
 }
 .Eboard-Position{
     text-align: center;
@@ -232,7 +237,15 @@ body{
     font-style: italic;
     font-weight: 300;
 }
-@media (min-width: 1000px) {
+@media (min-width: 650px) {
+    :root {
+        --repeat: 2;
+    }
+    #Eboard-Div{
+        padding-left: 0vw;
+    }
+}
+@media (min-width: 1200px) {
     :root {
         --repeat: 4;
     }
@@ -243,6 +256,7 @@ body{
         width: 95%;
     }
 }
+
 /* @media all and (min-width: 700) {
     #Eboard-Div{
         grid-template-columns: repeat(4, 1fr);
