@@ -14,6 +14,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body{
     background-color: #e8f1f2;
 }
+a{
+    text-decoration: none;
+}
 
 .Header-Div{
     background-color: #056b96;
@@ -72,6 +75,9 @@ body{
     font-size: clamp(.5rem, 1rem + .5vw, 3rem);
     margin: 0 auto;
     text-align: left;
+}
+#Discord a{
+    color: white;
 }
 .Discord-Text{
     animation: wave-text 3s ease-in-out 2s 1;
@@ -228,16 +234,17 @@ body{
     padding-bottom: 2px;
 }
 #Mailing-List{
-    margin-top: 3vh;;
-    font-size: clamp(1.5rem, 1.5rem + 1vw, 4rem);
+    margin-top: 3vh;
+    font-size: clamp(1rem, 1rem + .75vw, 2.5rem);
     text-align: center;
 }
 #Footer{
     margin-top: 2vh;
     text-align: center;
     margin-bottom: 5vh;
+    font-size: clamp(.5rem, .75rem + .5vw, 2rem);
     font-style: italic;
-    font-weight: 300;
+    font-weight: 100;
 }
 @media (min-width: 650px) {
     :root {
